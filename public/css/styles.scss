@@ -1,0 +1,454 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  background: red;
+  position: relative;
+  font-family: 'Montserrat', sans-serif !important;
+}
+html {
+  scroll-behavior: smooth;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+a {
+  text-decoration: none !important;
+ 
+}
+input:focus {
+  outline: none;
+}
+
+h1,
+h2 {
+  font-weight: 700 !important;
+}
+
+/* style for php msg */
+
+.msg {
+  border: 1px solid green;
+}
+
+/* in php */
+
+.head-area {
+  width: 100%;
+  padding: 20px;
+  position: fixed;
+  top: 0px;
+  left: 0;
+  z-index: 9999;
+  color: white;
+  transition: 0.3s;
+
+  a {
+    color: white;
+    transition: 0.3s;
+
+    &:hover {
+      color: white;
+      text-decoration: underline !important;
+    }
+  }
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+  }
+
+  &__btn {
+    border: 1px solid white;
+    background: none;
+    padding: 5px 20px;
+  }
+}
+
+.menu-sticky {
+  background: #005cb9;
+  height: 60px;
+}
+
+.header {
+  height: 100vh;
+  transform: skew(0deg, -10deg);
+  overflow: hidden;
+  margin-top: -200px;
+  z-index: 2;
+  color: white;
+
+  h1 {
+    width: 250px;
+    margin:0 0 0 0;
+    position: relative;
+  }
+
+  .hidden {
+    display: none;
+  }
+  .pan {
+    position: absolute;
+  }
+
+  &__head-title {
+    width: 600px;
+    margin:0 auto;
+  }
+
+  &__change-text{
+    position: absolute;
+    margin-left: 10px;
+  }
+  input {
+    width: 80%;
+    border: none;
+    border-radius: 15px;
+    padding: 10px;
+  }
+
+  .row {
+    min-height: 700px;
+  }
+
+  &__background {
+    background: url('../images/header-bg.png') no-repeat 50% 50% / cover;
+    transform: skew(0deg, 10deg);
+    transform-origin: 0% 40%;
+    width: 100vw !important;
+    height: 100vh;
+  }
+
+  &__content {
+    padding: 20px !important;
+  }
+}
+
+@media only screen and (max-width: 1176px) {
+  .header__row {
+    min-height: 900px !important;
+  }
+}
+
+.header-page {
+  background: url('../images/header-bg.png') no-repeat 50% 50% / cover;
+  height: 500px;
+  position: relative;
+}
+
+.content {
+  width: 100%;
+  top: 100px;
+  margin-top: -400px;
+
+  a {
+    color:#005cb9 !important;
+    font-weight: bold;
+  }
+
+  &__wrap {
+    position: relative;
+    min-height: 700px;
+    border-radius: 30px;
+    background: white;
+  }
+
+  h3 {
+    margin-bottom: 30px;
+  }
+}
+
+.categories {
+  position: relative;
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  a {
+    font-size: 0.9rem;
+    color: #0080ff !important;
+    font-weight: bold;
+    transition: 0.3s;
+
+    &:hover {
+      color: #005cb9 !important;
+    }
+  }
+  &__wrap {
+    background: whitesmoke;
+    border-radius: 20px;
+    -webkit-box-shadow: 0px 0px 18px -4px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 18px -4px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 18px -4px rgba(0, 0, 0, 0.75);
+  }
+  &__box-1 {
+    border-right: 1px solid #c1c1c1;
+    border-bottom: 1px solid #c1c1c1;
+  }
+  &__box-2 {
+    border-bottom: 1px solid #c1c1c1;
+  }
+  &__box-3 {
+    border-right: 1px solid #c1c1c1;
+  }
+}
+
+.profiles {
+  &__title {
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  &__status {
+    font-size: 0.8rem;
+  }
+  img {
+    border-radius: 30px;
+    margin: 20px 0 20px 0;
+    width: 100%;
+  }
+
+  &__btn {
+    border: none;
+    width: 100%;
+    margin: 10px 0 10px 0;
+    font-size: 0.9rem;
+    padding: 5px;
+    transition: 0.2s;
+
+    &:hover {
+      background: #0080ff;
+      color: white;
+    }
+  }
+
+  &__button {
+    display: flex;
+    justify-content: space-between;
+
+    button {
+      border: 1px solid grey;
+      font-size: 0.8rem;
+      cursor: not-allowed !important;
+    }
+  }
+}
+
+.banner {
+  min-height: 300px;
+  background: url('../images/banner-bg-1.png') no-repeat 50% 50% / cover;
+}
+
+.jobs-list {
+  a {
+    border: none;
+    color: white;
+    width: 150px;
+    height: 30px;
+    text-align: center;
+    padding-top: 5px;
+    display: block;
+    font-size: 0.8rem !important;
+    transition: 0.3s;
+    &:hover {
+      color: black;
+    }
+  }
+
+  .hall-time {
+    background: red !important;
+  }
+  .full-time {
+    background: green !important;
+    &:hover {
+      cursor: pointer;
+    }    
+  }
+  .btn-more {
+    width: 30px;
+    height: 30px;
+    background: #0080ff !important;
+  }
+  .remoty {
+    background: blueviolet !important;
+  }
+
+  font-size: 0.9rem;
+  &__item {
+    border-bottom: 1px solid #c1c1c1;
+  }
+}
+
+footer {
+  position: relative;
+  background: #4e4e4e;
+  color: white !important;
+
+  a:hover {
+    color: #1b1b1b;
+  }
+}
+
+/* TEMPLATES PAGES DESING */
+
+/* SEARCH */
+.page-search {
+  margin-bottom: 10px;
+}
+
+/* JOBS POST */
+
+.form-job {
+  margin-top:30px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: .9rem;
+
+  input {
+    border:none;
+    border-bottom: 1px solid #0080ff;
+    margin-bottom: 15px;
+
+    &[type=text],&[type=password] {
+      width: 90%;
+    }
+    &[type=radio] {
+      margin:15px 5px 20px 0;
+    }
+  }
+  textarea {
+    width: 100%;
+    border:1px solid #0080ff;
+    &:focus{
+      outline:1px solid #0080ff;
+    }
+  }
+}
+
+/* LOGIN PAGE */
+.error-page {
+  border:1px solid red;
+  padding: 20px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
