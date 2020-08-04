@@ -1,5 +1,5 @@
 <?php
-if ($_SESSION['userGrants'] == 2) {
+if ($_SESSION['userGrants'] == 2 || empty($_SESSION['userGrants'])) {
     header('Location: /');
     exit();
 }
